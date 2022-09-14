@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>Bookshelf Apps</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      
+      <header>
+         <!--navigasi atas-->
+         <nav class="navbar">
+             <div class="webname"><h1>Bookstar</h1></div>
+            <!--hamburger-->
+             <a href="#" class="hamburger-toggle">
+               <span class="bar"></span>
+               <span class="bar"></span>
+               <span class="bar"></span>
+              </a>
+            <!--Search Bar-->
+             <div class="search-section">
+                 <form id="Cari-Buku">
+                 <input id="CariJudul" type="text" placeholder="masukkan judul buku" />
+                 <button id="CariSubmit" type="submit" class="btn-green">Cari</button>
+                 </form>
+             </div>
+ 
+         </nav>
+     </header>
+
+     
+      <main>
+         <!--Form Data buku-->
+         <section class="bagianinput">
+            <h2>Masukkan Buku Baru</h2>
+            <form id="inputBuku">
+               <div class="input">
+                  <label for="input-judul-buku">Judul</label>
+                  <input id="input-judul-buku" type="text" required />
+               </div>
+               <div class="input">
+                  <label for="input-penulis">Penulis</label>
+                  <input id="input-penulis" type="text" required />
+               </div>
+               <div class="input">
+                  <label for="input-tahun">Tahun Terbit</label>
+                  <input id="input-tahun" type="number" required />
+               </div>
+               <div class="input_inline">
+                  <label for="input-buku-selesai">Selesai dibaca</label>
+                  <input id="input-buku-selesai" type="checkbox" />
+               </div>
+               <button id="bookSubmit" type="submit" class="button-submit" >Tambah Buku</button>
+            </form>
+         </section>
+
+         <!--rak buku-->
+         <section class="bookshelf-container">
+            <div class="bookshelf-notfinished">
+               <h2>Belum selesai dibaca</h2>
+               <div id="rak-buku-belum" class="daftar-buku">
+      
+               </div>
+            </div>
+
+            <div class="bookshelf-finished">
+               <h2>Selesai dibaca</h2>
+               <div id="rak-buku-selesai" class="daftar-buku">
+   
+               </div>
+            </div>
+            <button id="resetRak" class="btn-red" onclick="resetRak()">Kosongkan Rak</button>
+         </section>
+
+         <!--edit data-->
+         <section class="bagianinput input-edit">
+            <form id="editData">
+               <div class="input">
+                  <label for="editjudul">Judul</label>
+                  <input id="editjudul" type="text" required />
+               </div>
+               <div class="input">
+                  <label for="editpenulis">Penulis</label>
+                  <input id="editpenulis" type="text" required />
+               </div>
+               <div class="input">
+                  <label for="edittahun">Tahun Terbit</label>
+                  <input id="edittahun" type="number" required />
+               </div>
+               <button id="bataledit">Batal</button>
+               <button id="bataleditsubmit" type="submit" class="btn-green">Simpan</button>
+            </form>
+         </section>
+      </main>
+
+
+      <footer>
+         <p>Website ini dibuat oleh Renaldy William Lijaya Therry untuk keperluan submisi dicoding</p>
+      </footer>
+
+      
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script src ="main.js"></script>
+   </body>
+</html>

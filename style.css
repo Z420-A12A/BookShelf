@@ -1,0 +1,363 @@
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+main {
+   font-family: 'Zilla Slab', serif;
+   font-size: 14px;
+   max-width: 800px;
+   width: 80%;
+   margin: 0 auto;
+   padding: 16px;
+   position: relative;
+}
+
+/*navigasi atas*/
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color : rgb(16, 15, 15);
+   font-family: 'Poppins', sans-serif;
+}
+
+.webname {
+   font-size: 2.0rem;
+   margin: .5rem;
+   color: whitesmoke;
+}
+
+
+/*search-section */
+.navbar .search-section {
+   float : right;
+}
+
+.navbar input[type=text] {
+   padding: 6px;
+   margin-top: 8px;
+   font-size: 17px;
+   border: none;
+}
+
+.navbar .search-section button {
+   float: right;
+   padding: 6px 10px;
+   margin-top: 8px;
+   margin-right: 16px;
+   background: #ddd;
+   color: black;
+   font-size: 17px;
+   border: none;
+   cursor: pointer;
+}
+
+.hamburger-toggle{
+   position: absolute;
+   top: .75rem;
+   right: 1rem;
+   display : none;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 30px;
+   height: 21px;
+}
+
+.hamburger-toggle .bar{
+   height: 3px;
+   width: 100%;
+   background-color: white;
+   border-radius: 10px;
+}
+
+
+/*form data buku*/
+input {
+   margin-top: 5px;
+   border: none;
+   outline: 1px solid gray;
+}
+
+.bagianinput {
+   display: flex;
+   flex-direction: column;
+   padding: 16px;
+   background: antiquewhite;
+   border-radius: 10px;
+   border: 50px solid rgba(255, 255, 255, 0.18);
+}
+
+.bagianinput > h2 {
+   text-align: center;
+}
+
+.bagianinput > form > .input {
+   margin: 8px 0;
+}
+
+.bagianinput > form > .input > input {
+   display: block;
+   width: 100%;
+   padding: 8px;
+   border-radius: 50px;
+   font-weight: 600;
+}
+
+.bagianinput > form > .input > label {
+   font-weight: 700;
+}
+
+.bagianinput > form > .input_inline {
+   margin: 12px 0;
+   display: flex;
+   align-items: center;
+}
+
+.bagianinput > form > .input_inline > label {
+   font-weight: bold;
+   margin-right: 10px;
+}
+
+.bagianinput > form > .input_inline > #input-buku-selesai {
+   outline-style: none;
+}
+
+/* CSS button submit */
+.button-submit {
+   background: rgb(214, 28, 78);
+   border: 1px solid rgb(214, 28, 78);
+   border-radius: 6px;
+   box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+   box-sizing: border-box;
+   color: #FFFFFF;
+   cursor: pointer;
+   display: inline-block;
+   font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+   font-size: 16px;
+   font-weight: 800;
+   line-height: 16px;
+   min-height: 40px;
+   outline: 0;
+   padding: 12px 14px;
+   text-align: center;
+   text-rendering: geometricprecision;
+   text-transform: none;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   vertical-align: middle;
+ }
+ 
+ .button-submit:hover,
+ .button-submit:active {
+   background-color: initial;
+   background-position: 0 0;
+   color: #FF4742;
+ }
+ 
+ .button-submit:active {
+   opacity: .5;
+ }
+
+ 
+
+/*edit data*/
+.input-edit {
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   position: fixed;
+   justify-content: center;
+   border: none;
+   border-radius: 0;
+   display: none;
+   background-color: #FFF8BC;
+   backdrop-filter: blur(25px);
+}
+
+.input-edit > form {
+   background-color: #fff;
+   padding: 60px;
+   max-width: 500px;
+   margin: auto;
+   border-radius: 30px;
+   box-shadow: 0 4px 2px rgb(192, 192, 192);
+}
+
+.input-edit > form > button {
+   border: 0;
+   padding: 5px 10px;
+   margin: 0 5px 0 0;
+   border-radius: 5px;
+   cursor: pointer;
+   font-weight: 600;
+}
+
+/*container buku sudah dibaca, belum dibaca*/
+.bookshelf-container {
+   padding: 30px 20px;
+   margin: 16px 0 0 0;
+   background: #97D2EC;
+   border-radius: 10px;
+   border: 20px solid rgba(255, 255, 255, 0.18);
+}
+
+#resetRak {
+   color: white;
+   border: 0;
+   border-radius: 5px;
+   padding: 8px;
+   cursor: pointer;
+   font-weight: 600;
+   float: right;
+}
+
+/*rak belum selesai*/
+.bookshelf-notfinished {
+   border-bottom: 8px;
+   margin-bottom: 20px;
+}
+
+.bookshelf-notfinished h2{
+   text-align: center;
+}
+
+.bookshelf-notfinished > .daftar-buku {
+   padding: 16px;
+}
+
+.bookshelf-notfinished > .daftar-buku > .item_buku {
+   padding: 8px 16px 16px 16px;
+   border: 16px solid black;
+   border-radius: 8px;
+   margin: 10px 0;
+   background-color: #A7D2CB;
+}
+
+.bookshelf-notfinished > .daftar-buku > .item_buku > h3, p {
+   margin: 8px 0;
+   text-transform: capitalize;
+}
+
+.bookshelf-notfinished > .daftar-buku > .item_buku > .action > button {
+   border: 0;
+   padding: 5px 10px;
+   margin: 0 5px 0 0;
+   border-radius: 5px;
+   cursor: pointer;
+   font-weight: 600;
+}
+
+/*rak selesai*/
+.bookshelf-finished {
+   padding: 10px;
+}
+
+.bookshelf-finished  h2{
+   text-align: center;
+}
+
+.bookshelf-finished > .daftar-buku {
+   padding: 16px;
+}
+
+.bookshelf-finished > .daftar-buku > .item_buku {
+   padding: 8px 16px 16px 16px;
+   border: 16px solid black;
+   border-radius: 8px;
+   margin: 10px 0;
+   background-color: #A7D2CB;
+}
+
+.bookshelf-finished > .daftar-buku > .item_buku > h3, p {
+   margin: 8px 0;
+   text-transform: capitalize;
+}
+
+.bookshelf-finished > .daftar-buku > .item_buku > .action > button {
+   border: 0;
+   padding: 5px 10px;
+   margin: 0 5px 0 0;
+   border-radius: 5px;
+   cursor: pointer;
+   font-weight: 600;
+}
+
+/*tombol hijau merah dan orange*/
+.btn-green {
+   background-color: rgb(34 197 94);
+   color: white;
+   float: right;
+}
+
+.btn-red {
+   background-color: rgb(220 38 38);
+   color: white;
+   float: right;
+}
+.btn-orange {
+   background-color: rgb(251 191 36);
+   color: white;
+   float: right;
+}
+
+/* tombol batal edit*/
+#bataledit {
+   margin-bottom: 5px;
+   background-color: rgb(220 38 38);
+}
+
+/*footer*/
+footer {
+   background: rgb(32, 83, 117);
+   margin-top: 40px;
+   padding: 20px;
+}
+footer p{
+   color: whitesmoke;
+   font-size: 24px;
+   font-family: 'Zilla Slab', serif;
+   text-align: center;
+}
+
+/*media query*/
+@media (max-width: 500px){
+   .hamburger-toggle{
+       display: flex;
+   }
+
+   .search-section{
+       display: none;
+       width: 100%;
+   }
+
+   .navbar{
+       width: 100%;
+       flex-direction: column;
+       align-items: flex-start;
+   }
+
+   .search-section{
+       width: 100%;
+       text-align: center;
+       padding: .5rem 1rem;
+       margin-left: 50px;
+   }
+
+   .search-section.active{
+       display: flex;
+   }
+
+   .bookshelf-finished > .daftar-buku > .item_buku > .action > button {
+      border: 0;
+      margin: 0 5px 0 0;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      flex-direction: column;
+   }
+}
